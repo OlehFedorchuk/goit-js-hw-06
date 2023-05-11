@@ -1,11 +1,7 @@
-const ulCategoriesEl = document.querySelector("#categories");
-console.log(ulCategoriesEl);
+const ulCategoriesEl = document.querySelectorAll("li.item");
+console.log(`Number of categories: ${ulCategoriesEl.length}`);
 
-const countCategories = ulCategoriesEl.querySelectorAll("h2");
-// console.log(countCategories);
-console.log(`Number of categories: ${countCategories.length}`);
-
-console.log(ulCategoriesEl.nextSibling);
-// const ulRef = document.querySelectorAll("h2");
-// console.log(`Number of categories: ${ulRef.length}`);
-// console.log(window);
+ulCategoriesEl.forEach((item) => {
+  console.log(`Category: ${item.querySelector("h2").textContent}`);
+  console.log(`Elements: ${item.querySelectorAll("li").length}`);
+});
