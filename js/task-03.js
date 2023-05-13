@@ -14,7 +14,6 @@ const images = [
 ];
 
 const galeryEl = document.querySelector(".gallery");
-console.log(galeryEl);
 
 const markup = images
   .reverse()
@@ -24,5 +23,4 @@ const markup = images
   )
   .join("");
 
-console.log(markup);
 galeryEl.insertAdjacentHTML("afterbegin", markup);
