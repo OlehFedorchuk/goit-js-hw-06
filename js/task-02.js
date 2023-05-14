@@ -7,12 +7,13 @@ const ingredients = [
   "Condiments",
 ];
 const ulEl = document.querySelector("#ingredients");
+const liCreateEl = document.createDocumentFragment();
 
-for (const ingredient of ingredients) {
-  const liCreateEl = document.createElement("li");
+ingredients.forEach((ingredient) => {
+  const listItem = document.createElement("li");
+  listItem.textContent = ingredient;
+  listItem.classList.add("item");
+  liCreateEl.append(listItem);
+});
 
-  liCreateEl.textContent = ingredient;
-  liCreateEl.classList.add("item");
-
-  ulEl.appendChild(liCreateEl);
-}
+ulEl.appendChild(liCreateEl);
