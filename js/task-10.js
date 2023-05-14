@@ -23,12 +23,12 @@ let sizeElement = 30;
 
 function createBoxes(amount) {
   for (let i = 0; i < amount; i++) {
-    const newDevEl = document.createElement("div");
-    newDevEl.style.width = `${sizeElement}` + "px";
-    newDevEl.style.height = `${sizeElement}` + "px";
-    newDevEl.style.backgroundColor = getRandomHexColor();
-    console.log(newDevEl);
-    divBoxesEl.append(newDevEl);
+    const newDivEl = document.createElement("div");
+    newDivEl.style.width = `${sizeElement}` + "px";
+    newDivEl.style.height = `${sizeElement}` + "px";
+    newDivEl.style.backgroundColor = getRandomHexColor();
+    console.log(newDivEl);
+    divBoxesEl.append(newDivEl);
     sizeElement += 10;
   }
 }
