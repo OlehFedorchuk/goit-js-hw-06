@@ -33,8 +33,7 @@ function createBoxes(amount) {
   }
 }
 
-function destroyBoxes(event) {
-  event.innerHTML = "";
-  console.log("remove");
+function destroyBoxes() {
+  divBoxesEl.innerHTML = "";
   window.location.reload();
 }
