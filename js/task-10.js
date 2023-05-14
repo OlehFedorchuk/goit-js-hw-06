@@ -4,17 +4,19 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const divControlsEl = document.querySelector("#controls");
+const divControlsEl = document.querySelector("#controls input");
 const inputEl = document.querySelector("#controls input");
 const buttonCreateEl = document.querySelector("#controls button[data-create]");
-const divBoxesEl = document.querySelector("#boxes");
 const buttonDestroyEl = document.querySelector(
   "#controls button[data-destroy]"
 );
+const divBoxesEl = document.querySelector("#boxes");
 
 buttonCreateEl.addEventListener("click", () => {
-  createBoxes(inputEl.value);
+  const amount = parseInt(inputEl.value);
+  createBoxes(amount);
 });
+
 buttonDestroyEl.addEventListener("click", destroyBoxes);
 
 let sizeElement = 30;
