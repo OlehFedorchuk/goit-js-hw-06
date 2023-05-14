@@ -15,12 +15,7 @@ const buttonDestroyEl = document.querySelector(
 buttonCreateEl.addEventListener("click", () => {
   createBoxes(inputEl.value);
 });
-
-buttonDestroyEl.addEventListener("click", () => {
-  divBoxesEl.innerHTML = "";
-  console.log("remove");
-  window.location.reload();
-});
+buttonDestroyEl.addEventListener("click", destroyBoxes);
 
 let sizeElement = 30;
 
@@ -34,4 +29,10 @@ function createBoxes(amount) {
     divBoxesEl.append(newDevEl);
     sizeElement += 10;
   }
+}
+
+function destroyBoxes(event) {
+  event.innerHTML = "";
+  console.log("remove");
+  window.location.reload();
 }
