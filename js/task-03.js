@@ -16,7 +16,6 @@ const images = [
 const galeryEl = document.querySelector(".gallery");
 
 const markup = images
-  .reverse()
   .map(
     (image) =>
       `<li><img width=1260px src="${image.url}" alt="${image.alt}"></li>`
